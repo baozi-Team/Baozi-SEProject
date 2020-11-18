@@ -1,5 +1,8 @@
-[1]IPO表参考：https://wenku.baidu.com/view/b549f2880c22590102029d91.html
+[1]IPO表参考：
+https://wenku.baidu.com/view/b549f2880c22590102029d91.html
 
-[2]结构化概要设计工具之IPO图：https://www.cnblogs.com/yilang/p/12266167.html
+[2]结构化概要设计工具之IPO图：
+https://www.cnblogs.com/yilang/p/12266167.html
 
-[3]结构化——数据字典 https://zhuanlan.zhihu.com/p/149295020
+[3]结构化——数据字典 
+https://zhuanlan.zhihu.com/p/149295020
