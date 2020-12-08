@@ -1,0 +1,17 @@
+//成就设计伪代码 
+Public class achievement{
+	变量：成就总数 n
+	变量：i 
+	
+	读取用户请求;
+	if(进入成就 == true){
+		跳转至"成就界面";
+		While(成就界面){
+			for (i=1; i<=n; i++){
+				Printf("成就"+ i +"\n");
+			}
+		}
+	}
+	else
+		原界面不变化;
+}

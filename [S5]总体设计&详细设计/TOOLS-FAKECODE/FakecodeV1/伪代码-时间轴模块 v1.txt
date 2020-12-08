@@ -1,0 +1,20 @@
+public class Timeline{
+
+    // 显示日历{
+    //     x月x日 xxxx年
+    //     周日，周一，周二，周三，周四，周五，周六
+    //     今天为蓝色圆圈白色字体;
+    //     选中的为黑色圆圈白色字体;
+    // }
+
+    // 显示时间轴{
+    //     日期;
+    //     完成了count个包子;
+    // }
+
+    public static void AddRecord(){
+
+    }
+
+    public static 
+}

@@ -1,0 +1,30 @@
+public class Ranking{
+    变量：用户类 user
+    变量：当前用户 currentLoginUser
+    
+    容器：List of user
+    
+    //显示表项框格
+    ShowUI(排行榜基础界面)
+
+    //选取用户信息的排序依据进行排序显示
+    排序(对象：List of user,依据值:user.streamer_time_count,降序)
+
+    //显示表项信息
+    this.ShowInfo(List of user)
+    //显示当前登录用户信息
+    this.ShowInfo(currentLoginUser)
+
+    //显示用户信息
+    public static void ShowInfo(<List>){
+        显示信息(user.user_name)
+        显示信息(user.streamer_main_count)
+        显示信息(user.streamer_dietree_count)
+        显示信息(user.streamer_livetree_count)
+        显示信息(user.streamer_time_count)
+    }
+
+    public static void ShowUI(相应基础基础界面){
+        显示UI(排行榜ui)
+    }
+}

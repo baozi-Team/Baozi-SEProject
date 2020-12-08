@@ -1,0 +1,33 @@
+public class Adminstrator{
+    变量：功能对象
+    变量：管理员账号
+    变量：管理员密码
+
+    容器：List of 功能对象//所选中的功能
+
+    button.Start.确认管理员登录{
+        if(验证登录(管理员账号，管理员密码)==未通过){
+            消息提示("管理员账号或密码不正确")
+            return 
+        }
+        else{
+            执行管理员界面()
+        }
+    }
+
+    public static void runAdmin 执行管理员界面(){
+        //显示表项框格
+        ShowUI(管理员基础界面)
+
+        button.Start.选定的功能对象(){
+            执行选定的功能界面();            
+        }
+    }
+    
+    public static void runFunc 执行对应功能界面(){
+        //显示表项框格
+        ShowUI(对应功能界面)
+        //展示对应功能信息表
+        ShowInfo(List of 功能对象)
+    }
+}

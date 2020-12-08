@@ -1,0 +1,38 @@
+public class Shoping{
+    变量：当前用户 currentLoginUser
+    变量：商品被购买状态 isbuy
+    
+    容器：List of buns
+    容器：List of sound
+
+    //显示表项框格
+    ShowUI(商店界面基础线框格)
+
+    //显示各个商品的信息
+    while(<List>buns){//当包子列表非空
+        if(<List>buns.isbuy==true){
+            ShowInfo(Shop_buns_id)
+            ShowInfo(isbuy=true)//商品已被购买
+        }
+        else {
+            ShowInfo(Shop_buns_id)
+            ShowInfo(isbuy=false)//商品未被购买
+        }
+    }   
+    while(<List>sound){//当音效列表非空
+        if(<List>sound.isbuy==true){
+            ShowInfo(Shop_sound_id)
+            ShowInfo(isbuy=true)//商品已被购买
+        }
+        else {
+            ShowInfo(Shop_sound_id)
+            ShowInfo(isbuy=false)//商品未被购买
+        }
+    } 
+
+    button.Start.Buy(购买对象buns/sound){
+        购买对象.isbuy=true
+        修改数据库相应内容()
+        重新显示信息(购买对象)
+    }
+}
