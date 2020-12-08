@@ -1,0 +1,7 @@
+//专注组合伪代码
+public class FocusCombination{
+    变量: 被选择的蒸品编号buns_id
+    变量: 专注时长Focus_time
+
+    
+}

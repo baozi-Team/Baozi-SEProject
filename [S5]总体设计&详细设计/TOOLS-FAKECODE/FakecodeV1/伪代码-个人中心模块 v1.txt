@@ -1,0 +1,28 @@
+//个人中心设计伪代码 
+Public class personal{
+	变量：头像图片 picture
+	变量：用户名称 username
+	变量：用户账号 userid
+	变量：总时长 totaltime
+	变量：失败/成功占比  FSproportion
+	变量：总成功数 totalsuccess
+	成就完成度：achievement
+	
+	读取用户请求;
+	 if(进入个人中心==true){
+	 	跳转至"个人中心界面";
+		while(个人中心界面){
+			printf(picture\n);	//输出头像 
+			printf(username\n);		//输出用户名称 
+			printf(userid\n);		//输出用户id 
+			printf(totaltime\n);		//输出总时长 
+			printf(FSproportion); 		//输出失败/成功占比
+			printf(totalsuccess); 		//输出总成功数 
+			printf(achievement);		//输出成就完成度 
+		}
+		登出按钮; 
+	 } 
+	
+} 
+
+
