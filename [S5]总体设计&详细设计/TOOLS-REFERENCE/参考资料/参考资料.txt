@@ -1,0 +1,6 @@
+学生宿舍管理系统之逻辑结构设计
+https://blog.csdn.net/luoawai/article/details/84593932
+
+概要设计之逻辑结构设计
+https://group.cnblogs.com/topic/80689.html
+
