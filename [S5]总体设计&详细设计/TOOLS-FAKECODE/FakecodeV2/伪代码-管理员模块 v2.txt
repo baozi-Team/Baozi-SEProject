@@ -1,0 +1,31 @@
+public class Administrator{
+    变量：管理员对象 administrator
+    变量：管理员账号 administrator_login_id
+    变量：管理员密码 administrator_login_pwd
+    变量：功能类 func
+    容器：List of func
+
+    /*管理员验证登录*/
+    Administrator_Login(administrator_login_id,administrator_login_pwd){
+        if 输入的id与pwd为空
+            then 返回提示信息
+        
+        将数据库中tbl_Administrator的administrator_id匹配项的administrator_pwd值取出
+
+        if 数据库得对应密码==administrator_login_pwd
+            then 成功登录
+        else 登录失败
+
+        return
+    }
+
+    /*功能信息列表获取*/
+    FuncList_Info_Get(){
+        for i=0 and func to func!=null 
+            do func=从数据库中获取第i个选择的功能数据
+            在List of func容器中添加func元素
+        
+        return 
+    }  
+    
+}

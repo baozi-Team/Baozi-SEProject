@@ -5,18 +5,31 @@ public class Shoping{
     变量：商品类 buns
     容器：List of buns
 
+    /*获取用户金币数*/
     User_Money_Get(){
         从currentLoginUser中获取金币数信息
 
         return
     }
 
+    /*商品信息获取*/
     Buns_Info_Get(){
         for i=0 and buns to buns!=null
-            do user=从数据库中获取第i个商品数据
+            do buns=从数据库中获取第i个商品数据
             在List of buns容器中添加buns元素
 
         return 
+    }
+
+    /*购买商品*/
+    Buns_Buy(){
+        int cost = 从数据库tbl_shop_baozi中获取所购买buns的花费
+        if cost<User_Money_Get()
+            then {
+                将数据库tbl_shop_baozi中baozi_isbuy修改为true
+                将数据库tbl_user中的user_money-=cost
+            }
+        else 返回购买失败信息
     }
 
 }

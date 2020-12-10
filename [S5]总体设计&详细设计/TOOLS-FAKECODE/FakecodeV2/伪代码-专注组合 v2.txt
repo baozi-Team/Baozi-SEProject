@@ -1,0 +1,22 @@
+//专注组合伪代码
+public class FocusCombination{
+    变量：组合类 tag
+    变量：当前用户 currentLoginUser
+    容器：List of tag
+    
+    /*获取该用户组合列表*/
+    TagList_Info_Get(){
+        for i=0 and Tag to Tag!=null 
+            do Tag=从数据库tbl_tag的currentLoginUser匹配项中获取第i个组合数据
+            在List of Tag容器中添加Tag元素
+        
+        return
+    } 
+
+    /*获取选中的标签组合信息*/
+    Tag_Info_Get(tag){
+        从Tag变量中获取组合信息
+
+        return 
+    }
+}

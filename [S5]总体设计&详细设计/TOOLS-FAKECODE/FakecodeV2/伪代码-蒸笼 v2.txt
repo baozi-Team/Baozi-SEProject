@@ -1,0 +1,12 @@
+public class Steamer{
+    
+    变量：蒸笼类 steamer
+    变量：当前用户 currentLoginUser
+
+    Steamer_Info_Get(){
+        steamer=从数据库tbl_steamer中获取currentLoginUser匹配项的steamer类信息
+
+        return 
+    }   
+
+}
