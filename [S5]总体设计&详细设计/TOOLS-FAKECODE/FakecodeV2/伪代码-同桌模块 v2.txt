@@ -1,0 +1,47 @@
+//同桌设计伪代码 
+Public class Deskmate{
+	变量：当前用户 currentLoginUser
+	变量：同桌用户id deskmate_id
+	变量：今日是否专注 isforce=0（初始为0，今日没有专注） 
+	
+	//查找用户
+	User_Info_Get(deskmate_id){
+		从数据库中根据deskmate_id键值进行搜索得结果
+
+		return
+	}
+	
+	//建立同桌关系
+	Deskmate_Build(){
+	
+		将数据库中tbl_deskmate中user_id匹配项的deskmate_user_id值更改为deskmate_id
+		将数据库中tbl_deskmate中deskmate_id匹配项的deskmate_user_id值更改为currentLoginUser信息id
+
+		return 
+	}
+	
+	//检测今天是否专注 仅本日时间23:59:59时调用
+	Check_DailyCard(){
+		if isforce == 0 
+			then 解除同桌关系
+		else isforce = 0
+	}
+
+	//解除同桌关系
+	Deskmate_remove(){
+	
+		将数据库中tbl_deskmate中user_id匹配项的deskmate_user_id值更改为null
+		将数据库中tbl_deskmate中deskmate_id匹配项的deskmate_user_id值更改为null
+
+		return 
+	}
+	
+	//进行专注
+	Do_Force(){
+		forceTime=记录总专注时间 
+		将数据库中tbl_deskmate中deskmate_id匹配项的deskmate_time值加上forceTime
+		isforce = 1
+	}
+} 
+
+

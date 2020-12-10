@@ -1,0 +1,26 @@
+public class Timeline{
+
+    变量：事件类 event
+    变量：当前用户 currentLoginUser
+    容器：List of event
+
+    //事件列表获取
+    EventList_Info_Get(){
+        for i=0 and event to event!=null 
+            do event=从数据库中获取第i个事件数据
+            在List of event容器中添加event元素
+    
+        对List of event 内事件数据进行以发生时间值前后为依据的升序排序
+        
+        return
+    } 
+
+    //手动添加记录
+    Event_Add(){
+        event=获取到的输入信息
+        将数据库内tbl_event内各项匹配值根据event内信息进行更改
+
+        return
+    }
+
+}
