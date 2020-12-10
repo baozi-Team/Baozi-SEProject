@@ -1,0 +1,23 @@
+public class Ranking{
+
+    变量：用户类 user
+    变量：当前用户 currentLoginUser
+    容器：List of user
+
+    RankList_Info_Get(){
+        for i=0 and user to user!=null 
+            do user=从数据库中获取第i个用户数据
+            在List of user容器中添加user元素
+    
+        对List of user 内用户数据进行以总专注时间长度为依据的降序排序
+        
+        return 
+    }   
+    
+    CurrentLoginUser_Info_Get(){
+        从currentLoginUser中获取各个数据信息
+        
+        return
+    }
+
+}

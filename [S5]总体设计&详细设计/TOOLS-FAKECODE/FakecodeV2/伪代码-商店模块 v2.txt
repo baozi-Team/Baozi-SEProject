@@ -1,0 +1,22 @@
+public class Shoping{
+
+    变量：当前用户 currentLoginUser
+    变量：商品被购买状态 isbuy
+    变量：商品类 buns
+    容器：List of buns
+
+    User_Money_Get(){
+        从currentLoginUser中获取金币数信息
+
+        return
+    }
+
+    Buns_Info_Get(){
+        for i=0 and buns to buns!=null
+            do user=从数据库中获取第i个商品数据
+            在List of buns容器中添加buns元素
+
+        return 
+    }
+
+}

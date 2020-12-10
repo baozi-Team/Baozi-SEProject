@@ -1,0 +1,15 @@
+//个人中心设计伪代码 
+Public class personal{
+
+    变量：当前用户 currentLoginUser
+
+	//获取个人信息
+    CurrentLoginUser_Info_Get(){
+        从currentLoginUser中获取各个数据信息
+        
+        return
+    } 
+	
+} 
+
+

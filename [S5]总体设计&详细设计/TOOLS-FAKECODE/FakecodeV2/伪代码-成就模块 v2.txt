@@ -1,0 +1,19 @@
+//成就设计伪代码 
+Public class achievement{
+	变量：用户类 achievement
+    变量：当前用户 currentLoginUser
+    容器：List of achievement
+
+    AchievementList_Info_Get(){
+        for i=0 and uachievement to achievement!=null 
+            do achievement=从数据库tbl_achievement中获取currentLoginUser第i个成就数据
+            在List of achievement容器中添加achievement元素
+        
+        return 
+    }   
+    
+	Achievement_achieve(){
+		将数据库中tbl_achievement对应的achievement的achievement_islocked更改为true
+	}
+	
+}
