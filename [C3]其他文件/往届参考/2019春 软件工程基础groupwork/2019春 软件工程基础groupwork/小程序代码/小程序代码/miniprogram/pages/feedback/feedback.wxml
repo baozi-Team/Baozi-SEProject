@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" placeholder="请输入文本" style="height: 10em" />
+        <view class="weui-textarea-counter">请控制在100字范围内</view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="default" bindtap="openAlert">确认</button>
+    </view>
+  </view>
+</view>
+
+<form bindsubmit='res'>
+  <view class="section">
+    <input maxlength="10" name="username" placeholder="" />
+  </view>
+  <view><button form-type='submit'>提交</button></view>
+</form>

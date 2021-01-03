@@ -1,0 +1,40 @@
+<view class="flex">
+  <view class="setup">
+    <text class="biaoti">设置</text>
+  </view>
+</view>
+<!--标题设置-->
+
+
+<form bindsubmit='bindTimeChange'>
+  <view class="main">
+    <view class="x" style="display:flex;flex-direction: row;">
+      <view class="time">设定睡觉时间</view>
+      <picker mode="time" value="{{time}}" start="00:00" end="23:00" bindchange="bindTimeChange">
+        <view class="time2">{{time}}</view>
+      </picker>
+    </view>
+  </view>
+</form>
+<!--第一栏-->
+
+<form bindsubmit='res'>
+  <view class="main2">
+    <view class="x" style="display:flex;flex-direction: row;">
+      <view class="time">设定提醒时间</view>
+      <picker bindchange="bindremindtimeChange" value="{{remindtimeIndex}}" range="{{remindtime}}">
+        <view class="time2 ">睡前{{remindtime[remindtimeIndex]}}分钟</view>
+      </picker>
+    </view>
+  </view>
+  <!--第二栏-->
+</form>
+
+
+
+
+<view class="main2">
+  <view class="main3">
+    <button bindtap="feedback">用户反馈</button>
+  </view>
+</view>

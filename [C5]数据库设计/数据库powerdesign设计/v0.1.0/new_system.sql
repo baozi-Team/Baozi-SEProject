@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2020/12/9 16:11:02                           */
+/* Created on:     2020/12/30 20:40:08                          */
 /*==============================================================*/
 
 
@@ -25,7 +25,7 @@ drop table if exists user;
 /*==============================================================*/
 create table Adminstator
 (
-   administrator_id     int not null,
+   administrator_id     int not null auto_increment,
    administrator_pwd    varchar(50),
    primary key (administrator_id)
 );
@@ -37,7 +37,7 @@ alter table Adminstator comment 'Adminstator';
 /*==============================================================*/
 create table achievement
 (
-   achievement_id       int not null,
+   achievement_id       int not null auto_increment,
    user_id              int,
    achievement_name     varchar(50),
    achievement_discribe varchar(200),
@@ -52,7 +52,7 @@ alter table achievement comment 'achievement';
 /*==============================================================*/
 create table deskmate
 (
-   deskmate_user_id     int not null,
+   deskmate_user_id     int not null auto_increment,
    user_id              int,
    deskmate_time        int,
    primary key (deskmate_user_id)
@@ -65,10 +65,11 @@ alter table deskmate comment 'deskmate';
 /*==============================================================*/
 create table event
 (
-   event_id             int not null,
+   event_id             int not null auto_increment,
    user_id              int,
    event_discribe       varchar(200),
-   event_time           varchar(50),
+   event_time           int,
+   event_date           varchar(50),
    primary key (event_id)
 );
 
@@ -79,7 +80,7 @@ alter table event comment 'event';
 /*==============================================================*/
 create table shop_baozi
 (
-   shop_baozi_id        int not null,
+   shop_baozi_id        int not null auto_increment,
    user_id              int,
    baozi_isbuy          bool,
    primary key (shop_baozi_id)
@@ -92,7 +93,7 @@ alter table shop_baozi comment 'shop_baozi';
 /*==============================================================*/
 create table steamer
 (
-   steamer_id           int not null,
+   steamer_id           int not null auto_increment,
    user_id              int,
    steamer_main_count   int,
    steamer_dietree_count int,
@@ -108,7 +109,7 @@ alter table steamer comment 'steamer';
 /*==============================================================*/
 create table tag
 (
-   tag_id               int not null,
+   tag_id               int not null auto_increment,
    user_id              int,
    tag_discribe         varchar(200),
    primary key (tag_id)
@@ -121,7 +122,7 @@ alter table tag comment 'tag';
 /*==============================================================*/
 create table user
 (
-   user_id              int not null,
+   user_id              int not null auto_increment,
    deskmate_user_id     int,
    steamer_id           int,
    user_name            varchar(50),

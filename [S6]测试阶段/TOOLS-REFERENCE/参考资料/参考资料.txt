@@ -1,0 +1,23 @@
+[1] 《GB856T——88》国标文档
+[2] 《软件工程导论》清华大学出版社，张海藩、牟永敏编著
+[3]  微信小程序平台
+https://mp.weixin.qq.com/cgi-bin/wx
+[4] 测试计划的设计与编写
+ https://www.cnblogs.com/muzipaopao/p/10730165.html
+
+
+微信官方文档-单元测试
+https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/unit-test.html
+
+【专项测试工具】微信小程序性能分析工具
+https://blog.csdn.net/jlhx123456/article/details/108420884
+
+白盒测试
+https://blog.csdn.net/syfalex/article/details/78663011
+
+【转】白盒测试及其基本方法
+https://www.cnblogs.com/wangcp-2014/p/11363407.html
+
+
+
+

@@ -1,0 +1,19 @@
+<scroll-view class="wrap">
+  <view class="title">睡眠圈排行榜</view>
+
+  <view class="list">
+    <view class="list-item" wx:for="{{info}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+      <view class="left">
+        <text class="rank">{{idx + 1}}</text>
+        <text class="name"></text>
+      </view>
+      <view class="right">
+        <text class="percent">{{item.percent}}</text>
+        <text class="icon-{{item.like ? 'like' : 'unlike'}}" bindtap="clickItem" data-id="{{item.id}}">❤</text>
+        <text class="heart">{{item.heart}}</text>
+      </view>
+    </view>
+  </view>
+
+  <navigator url='/pages/setting/setting' class="btn-back">返回</navigator>
+</scroll-view>
