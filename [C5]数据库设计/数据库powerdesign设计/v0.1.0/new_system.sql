@@ -1,22 +1,16 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2020/12/30 20:40:08                          */
+/* Created on:     2021/1/20 14:45:06                           */
 /*==============================================================*/
 
 
 drop table if exists Adminstator;
-
-drop table if exists achievement;
-
-drop table if exists deskmate;
 
 drop table if exists event;
 
 drop table if exists shop_baozi;
 
 drop table if exists steamer;
-
-drop table if exists tag;
 
 drop table if exists user;
 
@@ -25,40 +19,12 @@ drop table if exists user;
 /*==============================================================*/
 create table Adminstator
 (
-   administrator_id     int not null auto_increment,
+   administrator_id     int not null,
    administrator_pwd    varchar(50),
    primary key (administrator_id)
 );
 
 alter table Adminstator comment 'Adminstator';
-
-/*==============================================================*/
-/* Table: achievement                                           */
-/*==============================================================*/
-create table achievement
-(
-   achievement_id       int not null auto_increment,
-   user_id              int,
-   achievement_name     varchar(50),
-   achievement_discribe varchar(200),
-   achievement_islocked bool,
-   primary key (achievement_id)
-);
-
-alter table achievement comment 'achievement';
-
-/*==============================================================*/
-/* Table: deskmate                                              */
-/*==============================================================*/
-create table deskmate
-(
-   deskmate_user_id     int not null auto_increment,
-   user_id              int,
-   deskmate_time        int,
-   primary key (deskmate_user_id)
-);
-
-alter table deskmate comment 'deskmate';
 
 /*==============================================================*/
 /* Table: event                                                 */
@@ -68,8 +34,7 @@ create table event
    event_id             int not null auto_increment,
    user_id              int,
    event_discribe       varchar(200),
-   event_time           int,
-   event_date           varchar(50),
+   event_time           varchar(50),
    primary key (event_id)
 );
 
@@ -80,7 +45,7 @@ alter table event comment 'event';
 /*==============================================================*/
 create table shop_baozi
 (
-   shop_baozi_id        int not null auto_increment,
+   shop_baozi_id        int not null,
    user_id              int,
    baozi_isbuy          bool,
    primary key (shop_baozi_id)
@@ -105,40 +70,19 @@ create table steamer
 alter table steamer comment 'steamer';
 
 /*==============================================================*/
-/* Table: tag                                                   */
-/*==============================================================*/
-create table tag
-(
-   tag_id               int not null auto_increment,
-   user_id              int,
-   tag_discribe         varchar(200),
-   primary key (tag_id)
-);
-
-alter table tag comment 'tag';
-
-/*==============================================================*/
 /* Table: user                                                  */
 /*==============================================================*/
 create table user
 (
    user_id              int not null auto_increment,
-   deskmate_user_id     int,
    steamer_id           int,
    user_name            varchar(50),
-   user_pwd             varchar(50),
-   user_loginNum        varchar(50),
    user_money           int,
+   user_avatarUrl       varchar(100),
    primary key (user_id)
 );
 
 alter table user comment 'user';
-
-alter table achievement add constraint FK_Relationship_4 foreign key (user_id)
-      references user (user_id) on delete restrict on update restrict;
-
-alter table deskmate add constraint FK_Relationship_9 foreign key (user_id)
-      references user (user_id) on delete restrict on update restrict;
 
 alter table event add constraint FK_Relationship_8 foreign key (user_id)
       references user (user_id) on delete restrict on update restrict;
@@ -148,12 +92,6 @@ alter table shop_baozi add constraint FK_Relationship_6 foreign key (user_id)
 
 alter table steamer add constraint FK_Relationship_3 foreign key (user_id)
       references user (user_id) on delete restrict on update restrict;
-
-alter table tag add constraint FK_Relationship_7 foreign key (user_id)
-      references user (user_id) on delete restrict on update restrict;
-
-alter table user add constraint FK_Relationship_10 foreign key (deskmate_user_id)
-      references deskmate (deskmate_user_id) on delete restrict on update restrict;
 
 alter table user add constraint FK_Relationship_2 foreign key (steamer_id)
       references steamer (steamer_id) on delete restrict on update restrict;
